@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mssql:
+    container_name: lancrypt_mssql
+    build: ./mssql
+    ports:
+      - 1433:1433
+    volumes:
+      - ~/apps/mssql/data:/var/lib/mssqlql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Qo_BKT3nNx
+    restart: unless-stopped

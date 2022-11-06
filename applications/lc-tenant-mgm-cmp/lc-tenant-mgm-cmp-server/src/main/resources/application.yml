@@ -1,0 +1,48 @@
+api:
+  base-path: /api
+
+server:
+  port: 8080
+
+spring:
+  messages:
+    basename: classpath:/messages
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    database: sql_server
+    database-platform: org.hibernate.dialect.SQLServer2016Dialect
+    hibernate:
+      ddl-auto: none # switch to none when we use liquibase
+    open-in-view: false
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/master.xml
+  mail:
+    host: smtp.strato.de
+    port: 465
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          ssl.enable: true
+
+keycloak:
+  realm: lc-tenant
+  public-client: false
+  principal-attribute: preferred_username
+  credentials:
+    provider: secret
+    username: ${KEYCLOAK_CREDENTIALS_USERNAME}
+    password: ${KEYCLOAK_CREDENTIALS_PASSWORD}
+
+lc:
+  auditing:
+    shared-jwt-secret: ${LC_AUDITING_SHARED-JWT-SECRET}
+
+  scheduling:
+    tenant-cleanup-interval: 1440 #interval in minutes

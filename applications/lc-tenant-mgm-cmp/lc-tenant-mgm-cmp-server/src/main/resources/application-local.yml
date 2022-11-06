@@ -1,0 +1,35 @@
+server:
+  port: 8081 #to run it together with lc-portal-fe-cmp
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;database=lc-tenant-mgm;encrypt=false
+    username: sa
+    password: Qo_BKT3nNx
+  jpa:
+    show-sql: true
+
+keycloak:
+  auth-server-url: https://auth-dev.lancrypt.com/auth
+  resource: lc-tenant-spa-local
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
+
+lc:
+  auditing:
+    shared-jwt-secret: 03ad742a-24df-4a30-97e7-60ca98e9c6e8
+
+  application-urls:
+    backend:
+      auditing-cmp-baseurl: http://localhost:8082
+    frontend:
+      lc-tenant-spa: http://localhost:4200
+
+  scheduling:
+    tenant-cleanup-interval: 999999
+    key-cloak-events-enabled: true

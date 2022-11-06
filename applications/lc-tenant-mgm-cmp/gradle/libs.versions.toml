@@ -1,0 +1,41 @@
+[versions]
+clf-gradle = "7.2.5"
+clf-platform-spring = "1.0.3"
+
+mapstruct = "1.5.2.Final"
+keycloak = "19.0.1"
+mssql-jdbc  ="6.1.0.jre7"
+java-jwt = "4.0.0"
+shedlock = "4.42.0"
+aspectj = "1.9.9.1"
+applicationInsights = "3.4.1"
+
+[libraries]
+
+cloudflight-platform-spring-bom = { module = "io.cloudflight.platform.spring:platform-spring-bom", version.ref = "clf-platform-spring" }
+cloudflight-platform-spring-test-bom = { module = "io.cloudflight.platform.spring:platform-spring-test-bom", version.ref = "clf-platform-spring" }
+
+keycloak-bom = { module = "org.keycloak.bom:keycloak-adapter-bom", version.ref = "keycloak" }
+keycloak-admin-client = { module = "org.keycloak:keycloak-admin-client", version.ref = "keycloak" }
+keycloak-spring = { module = "org.keycloak:keycloak-spring-boot-starter", version.ref = "keycloak" }
+
+mapstruct-core = { module = "org.mapstruct:mapstruct", version.ref = "mapstruct" }
+mapstruct-processor = { module = "org.mapstruct:mapstruct-processor", version.ref = "mapstruct" }
+
+mssql-jdbc = {module="com.microsoft.sqlserver:mssql-jdbc", version.ref = "mssql-jdbc"}
+
+java-jwt = {module="com.auth0:java-jwt", version.ref = "java-jwt" }
+
+shedlock-spring = {module="net.javacrumbs.shedlock:shedlock-spring", version.ref = "shedlock"}
+shedlock-jdbc = {module="net.javacrumbs.shedlock:shedlock-provider-jdbc-template", version.ref = "shedlock"}
+
+aspectj = {module="org.aspectj:aspectjweaver", version.ref = "aspectj"}
+
+applicationInsights = {module="com.microsoft.azure:applicationinsights-runtime-attach", version.ref = "applicationInsights"}
+
+
+[bundles]
+
+[plugins]
+cloudflight = { id = "cloudflight-gradle-plugin", version.ref = "clf-gradle" }
+

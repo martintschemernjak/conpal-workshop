@@ -9,13 +9,6 @@ module "conpal-mssql" {
 
   public_network_access_enabled = var.mssql_public_network_access_enabled
 
-  databases = [
-    {
-      sku_name = var.mssql_portal_sku_name,
-      name     = "lc-mtschemernjak-ws"
-    },
-  ]
-
   firewall_rules = {
     aks = {
       start_ip_address = module.clf-azure-aks.outbound_ip.ip_address

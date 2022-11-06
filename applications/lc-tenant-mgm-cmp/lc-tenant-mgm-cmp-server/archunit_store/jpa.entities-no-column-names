@@ -1,0 +1,2 @@
+com.lancrypt.lctenantmgmcmp.entities.Group.tenantId: Do not use the field Column.name
+com.lancrypt.lctenantmgmcmp.entities.User.tenantId: Do not use the field Column.name
