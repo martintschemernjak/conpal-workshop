@@ -7,10 +7,10 @@ project_admin_email = "martin.tschemernjak@cloudflight.io"
 
 
 # Database
-postgresql_sku_name                      = "B_Standard_B1ms"
-postgresql_storage_mb                    = 32768
-postgresql_backup_retention_days         = 7
-postgresql_public_network_access_enabled = true
+mssql_portal_sku_name               = "Basic"
+mssql_tenantmgm_sku_name            = "Basic"
+mssql_auditlog_sku_name             = "Basic"
+mssql_public_network_access_enabled = true
 
 # AKS
 aks_agent_size = "Standard_D2s_v3"

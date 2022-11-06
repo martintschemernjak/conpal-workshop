@@ -1,6 +1,26 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/betr-io/mssql" {
+  version     = "0.2.5"
+  constraints = "0.2.5"
+  hashes = [
+    "h1:Rr3KSeQnpd30KNRGfVO7Aj+v6zKnEx+ljocaD3r8O8o=",
+    "zh:2094c9efd9590780d6fda67587ae8142a29faf0adc0a16619e90bddee460f3c5",
+    "zh:277856771a8fe432b5c0edbb87e8e4c99cc787f218d920fc3ae8f9933cae4317",
+    "zh:28f354558f625f38d0cab370fea99c8dbbe25608830077a7e06af594ec19f5b4",
+    "zh:2a7f9c3fc130c2ce8628d25d230aff8041a1462d7422a51018c01138935ed6cc",
+    "zh:5874fbc5a0f64193501050c0fe0a0e9d2f4145f44ae596017eb421505f1b94cf",
+    "zh:82ecf175be3086b45d3559a58d4b682f0daea7433fcf32d3e49ac12321dba609",
+    "zh:951ee92c3cbe644b7e76643a4d87225a4595f8e9089419766828180bafb1fade",
+    "zh:af6b736a49a9ff3691220b88f642928260abb8d029229fc11b1e4a7c4990868d",
+    "zh:af9f89dbf4f58e3b0546aa1d367fec7e9ca2de6028451049ce4f33f3ab5365ec",
+    "zh:b0c95385aa07bee4a4df8c65fe12ad63a1e93c6b23ff7b21d6edfe5f38b02da7",
+    "zh:e39f7aa8f3e808911583c7cfc060013b497ea49efe22fb06e5142e8c5ad8efc2",
+    "zh:e472456a281bb1fb2b01dca4249c157cb75b136403f166a08360fd120c563e25",
+  ]
+}
+
 provider "registry.terraform.io/hashicorp/azurerm" {
   version     = "3.18.0"
   constraints = ">= 3.18.0, 3.18.0"

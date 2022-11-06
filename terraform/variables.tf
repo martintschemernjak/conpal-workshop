@@ -24,29 +24,28 @@ variable "project_name" {
 }
 
 
-variable "postgresql_sku_name" {
-  type        = string
-  description = "SKU of the Postgresql FlexServer"
-  default     = "B_Standard_B1ms"
-}
-
-variable "postgresql_backup_retention_days" {
-  type        = number
-  description = "The backup retention days for the PostgreSQL Flexible Server"
-  default     = 7
-}
-
-variable "postgresql_storage_mb" {
-  type        = number
-  description = "Initial size of the database"
-  default     = 32768
-}
-
-variable "postgresql_public_network_access_enabled" {
+variable "mssql_public_network_access_enabled" {
   type        = bool
   default     = false
   description = "Enables if the database has public access or not"
 }
+
+variable "mssql_portal_sku_name" {
+  type        = string
+  default     = "Basic"
+  description = "Tier of the MSSQL Database"
+}
+variable "mssql_tenantmgm_sku_name" {
+  type        = string
+  default     = "Basic"
+  description = "Tier of the MSSQL Database"
+}
+variable "mssql_auditing_sku_name" {
+  type        = string
+  default     = "Basic"
+  description = "Tier of the MSSQL Database"
+}
+
 
 variable "project_admin_email" {
   type        = string

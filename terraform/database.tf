@@ -1,21 +1,20 @@
-module "clf-azure-postgresql" {
-  source = "./modules/clf-azure-postgresql"
 
-  resource_group       = module.clf-azure-platform.resource_group
-  project_name         = var.project_name
-  key_vault            = module.clf-azure-platform.key_vault
-  monitor_action_group = module.clf-azure-platform.monitor_action_group
-  subnet               = module.clf-azure-platform.subnet_postgres
+module "conpal-mssql" {
+  source = "./modules/conpal-mssql"
 
-  server_sku            = var.postgresql_sku_name
-  storage_mb            = var.postgresql_storage_mb
-  backup_retention_days = var.postgresql_backup_retention_days
+  project_name   = var.project_name
+  resource_group = module.clf-azure-platform.resource_group
 
-  public_network_access_enabled = var.postgresql_public_network_access_enabled
+  key_vault = module.clf-azure-platform.key_vault
 
-  databases = {
-    "keycloak" = {}
-  }
+  public_network_access_enabled = var.mssql_public_network_access_enabled
+
+  databases = [
+    {
+      sku_name = var.mssql_portal_sku_name,
+      name     = "lc-mtschemernjak-ws"
+    },
+  ]
 
   firewall_rules = {
     aks = {
@@ -119,12 +118,4 @@ module "clf-azure-postgresql" {
       end_ip_address   = "83.164.155.114"
     }
   }
-
-  private_endpoints = {
-    endpoint_1 = {
-      virtual_network = module.clf-azure-platform.virtual_network
-      subnet          = module.clf-azure-platform.subnet_postgres
-    }
-  }
 }
-
