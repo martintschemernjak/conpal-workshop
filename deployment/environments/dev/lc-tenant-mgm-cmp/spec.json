@@ -1,0 +1,14 @@
+{
+  "apiVersion": "tanka.dev/v1alpha1",
+  "kind": "Environment",
+  "metadata": {
+    "name": "environments/dev/lc-tenant-mgm-cmp"
+  },
+  "spec": {
+    "apiServer": "https://lancrypt-dev-k8s-25bcf6fd.hcp.westeurope.azmk8s.io:443",
+    "namespace": "lancrypt",
+    "resourceDefaults": {},
+    "expectVersions": {},
+    "injectLabels": true
+  }
+}
