@@ -25,19 +25,19 @@ spec:
         - name: APPLICATIONINSIGHTS_CONNECTION_STRING
           valueFrom:
             secretKeyRef:
-              key: ws-spring-backend-group1
-              name: application-insights-connectionstrings-group1
+              key: connectionstring
+              name: application-insights-connectionstring-group1
         - name: SPRING_DATASOURCE_USERNAME
           valueFrom:
             secretKeyRef:
               key: username
-              name: ws-spring-backend-group1-db-credentials
+              name: ws-spring-backend-db-credentials-group1
         - name: SPRING_DATASOURCE_PASSWORD
           valueFrom:
             secretKeyRef:
               key: password
-              name: ws-spring-backend-group1-db-credentials
-        image: crlancryptdevwesteurope001.azurecr.io/applications/ws-spring-backend:group1
+              name: ws-spring-backend-db-credentials-group1
+        image: crconpalwswesteurope001.azurecr.io/workshop/group1/ws-spring-backend
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 10
@@ -88,5 +88,5 @@ spec:
           driver: secrets-store.csi.k8s.io
           readOnly: true
           volumeAttributes:
-            secretProviderClass: ws-spring-backend-group1-db-credentials
+            secretProviderClass: ws-spring-backend-db-credentials-group1
         name: secrets-store01-inline

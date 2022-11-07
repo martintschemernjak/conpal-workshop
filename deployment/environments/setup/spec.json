@@ -1,0 +1,14 @@
+{
+  "apiVersion": "tanka.dev/v1alpha1",
+  "kind": "Environment",
+  "metadata": {
+    "name": "environments/setup"
+  },
+  "spec": {
+    "apiServer": "https://conpal-ws-k8s-51e7450b.hcp.westeurope.azmk8s.io:443",
+    "namespace": "lancrypt",
+    "resourceDefaults": {},
+    "expectVersions": {},
+    "injectLabels": true
+  }
+}

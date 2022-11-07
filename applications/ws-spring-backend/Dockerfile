@@ -3,10 +3,7 @@ WORKDIR /home/root/build/
 
 COPY . .
 
-RUN gradle clean build 
-
-RUN ls
-RUN ls ./build/libs
+RUN gradle clean build
 
 ## Stage 2 where Docker is running a java process to run a service built in previous stages.
 FROM eclipse-temurin:17-jdk
