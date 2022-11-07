@@ -110,5 +110,9 @@ module "conpal-mssql" {
       start_ip_address = "83.164.155.114"
       end_ip_address   = "83.164.155.114"
     }
+    mtschemernjak = {
+      start_ip_address = "84.115.236.147"
+      end_ip_address   = "84.115.236.147"
+    }
   }
 }

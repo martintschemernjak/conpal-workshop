@@ -14,4 +14,4 @@ mssql_public_network_access_enabled = true
 
 # AKS
 aks_agent_size = "Standard_D2s_v3"
-aks_nodes      = 4
+aks_nodes      = 3
