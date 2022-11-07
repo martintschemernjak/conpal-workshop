@@ -9,7 +9,6 @@ project_admin_email = "martin.tschemernjak@cloudflight.io"
 # Database
 mssql_portal_sku_name               = "Basic"
 mssql_tenantmgm_sku_name            = "Basic"
-mssql_auditlog_sku_name             = "Basic"
 mssql_public_network_access_enabled = true
 
 # AKS

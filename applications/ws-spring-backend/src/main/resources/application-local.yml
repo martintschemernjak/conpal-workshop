@@ -8,9 +8,9 @@ spring:
   messages:
     basename: classpath:/messages
   datasource:
-    #url: jdbc:sqlserver://sql-lancrypt-dev-001.database.windows.net:1433;database=lc-tenant-mgm;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: jdbc:sqlserver://localhost:1433;database=workshop;encrypt=false
+    username: sa
+    password: Qo_BKT3nNx
   jpa:
     database: sql_server
     database-platform: org.hibernate.dialect.SQLServer2016Dialect

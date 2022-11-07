@@ -4,6 +4,8 @@ package com.lancryptws.wsspringbackend.controller;
 import com.lancryptws.wsspringbackend.dto.CreationResult;
 import com.lancryptws.wsspringbackend.dto.UserCreateDto;
 import com.lancryptws.wsspringbackend.dto.UserViewDto;
+import com.lancryptws.wsspringbackend.mapper.UserMapper;
+import com.lancryptws.wsspringbackend.services.UserService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +16,21 @@ import java.util.UUID;
 public class UserController {
     private final String CONTEXT_PATH = "/api/user";
 
+    private final UserService userService;
+    private final UserMapper userMapper;
+
+    public UserController(UserService userService, UserMapper userMapper) {
+        this.userService = userService;
+        this.userMapper = userMapper;
+    }
+
     @PostMapping(value = CONTEXT_PATH, consumes = MediaType.APPLICATION_JSON_VALUE)
     CreationResult createUser(@Valid @RequestBody UserCreateDto createDto){
-        return null;
+        return userService.createUser(createDto);
     }
 
     @GetMapping(CONTEXT_PATH + "/{userId}")
     UserViewDto getById(@PathVariable(name = "userId") UUID userId){
-        return null;
+        return userMapper.map(userService.findById(userId));
     }
 }
