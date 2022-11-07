@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/component: backend
     app.kubernetes.io/name: ws-spring-backend-group1
   name: ws-spring-backend-group1
-  namespace: default
+  namespace: lancrypt
 spec:
   replicas: 1
   selector:
@@ -80,7 +80,7 @@ spec:
           readOnly: true
       dnsPolicy: ClusterFirst
       restartPolicy: Always
-      schedulerName: default-scheduler
+      schedulerName: lancrypt-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:
