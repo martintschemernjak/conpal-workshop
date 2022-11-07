@@ -15,7 +15,7 @@ dependencies {
     implementation 'io.cloudflight.platform.spring:platform-spring-server-config'
     implementation 'io.cloudflight.platform.spring:platform-spring-jpa'
     testImplementation 'io.cloudflight.platform.spring:platform-spring-test'
-    testImplementation 'io.cloudflight.platform.spring:platform-spring-test-archunit'
+    //testImplementation 'io.cloudflight.platform.spring:platform-spring-test-archunit'
 
     implementation 'org.springframework.boot:spring-boot-actuator'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'

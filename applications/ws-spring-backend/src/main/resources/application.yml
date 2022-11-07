@@ -1,0 +1,21 @@
+api:
+  base-path: /api
+
+server:
+  port: 8080
+
+spring:
+  messages:
+    basename: classpath:/messages
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    database: sql_server
+    database-platform: org.hibernate.dialect.SQLServer2016Dialect
+    hibernate:
+      ddl-auto: none # switch to none when we use liquibase
+    open-in-view: false
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/master.xml
