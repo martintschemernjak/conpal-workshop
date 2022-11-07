@@ -20,6 +20,9 @@ repositories {
 
 dependencies {
 
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+
+
 	implementation 'com.microsoft.azure:applicationinsights-runtime-attach:3.4.2'
 	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
 

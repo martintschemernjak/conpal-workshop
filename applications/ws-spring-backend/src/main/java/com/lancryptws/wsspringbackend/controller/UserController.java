@@ -33,4 +33,7 @@ public class UserController {
     UserViewDto getById(@PathVariable(name = "userId") UUID userId){
         return userMapper.map(userService.findById(userId));
     }
+
+    //TODO: Create GET Endpoint with the path /api/user/groupX/{name}
+    //Use the getMessageFromCloudfunction Method of the useService
 }
