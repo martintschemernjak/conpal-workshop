@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/name: ws-spring-backend-group1
     name: ws-spring-backend-group1
   name: ws-spring-backend-group1
-  namespace: lancrypt
+  namespace: default
 spec:
   internalTrafficPolicy: Cluster
   ipFamilies:
