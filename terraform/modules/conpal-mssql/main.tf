@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.18.0"
+      version = "=3.30.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -13,7 +13,6 @@ terraform {
       version = "0.2.5"
     }
   }
-  experiments = [module_variable_optional_attrs]
 }
 
 provider "mssql" {

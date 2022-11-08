@@ -11,7 +11,7 @@ metadata:
   name: ws-spring-backend-group1
   namespace: lancrypt
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: ws-spring-backend-group1
@@ -80,7 +80,7 @@ spec:
           readOnly: true
       dnsPolicy: ClusterFirst
       restartPolicy: Always
-      schedulerName: lancrypt-scheduler
+      schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:

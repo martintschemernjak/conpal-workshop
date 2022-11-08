@@ -5,7 +5,7 @@
     "name": "environments/setup"
   },
   "spec": {
-    "apiServer": "https://conpal-ws-k8s-bc973fa6.hcp.westeurope.azmk8s.io:443",
+    "apiServer": "https://conpal-ws-k8s-72bb99a5.hcp.westeurope.azmk8s.io:443",
     "namespace": "lancrypt",
     "resourceDefaults": {},
     "expectVersions": {},
