@@ -8,7 +8,7 @@ spring:
   messages:
     basename: classpath:/messages
   datasource:
-    url: jdbc:sqlserver://sql-conpal-ws-001.database.windows.net:1433;database=workshop-group1;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: jdbc:sqlserver://sql-conpal-ws-001.database.windows.net:1433;database=ws-group1;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:

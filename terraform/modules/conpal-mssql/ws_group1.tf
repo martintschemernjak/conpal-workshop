@@ -33,7 +33,7 @@ resource "mssql_login" "dblogin" {
   server {
     host = "${azurerm_mssql_server.main.name}.database.windows.net"
     login {
-      username = random_string.database_admin_username.result
+      username = "${random_string.database_admin_username.result}@${azurerm_mssql_server.main.name}"
       password = random_password.database_admin_password.result
     }
   }
@@ -46,7 +46,7 @@ resource "mssql_user" "dbuser" {
   server {
     host = "${azurerm_mssql_server.main.name}.database.windows.net"
     login {
-      username = random_string.database_admin_username.result
+      username = "${random_string.database_admin_username.result}@${azurerm_mssql_server.main.name}"
       password = random_password.database_admin_password.result
     }
   }

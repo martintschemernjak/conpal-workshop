@@ -2,7 +2,7 @@
 {
   _config+:: {
     nginxingress+: {
-      loadBalancerIP: '20.16.208.38',
+      loadBalancerIP: '52.232.34.155',
     },
     namespace+: {
       name: 'lancrypt',
