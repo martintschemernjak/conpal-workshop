@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c1b7a67a-e98d-4b7d-abbc-fcbac814fc79",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23069211"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Martin\",\r\n    \"lastName\": \"Tschemernjak\",\r\n    \"emailAddress\": \"martin.tschemernjak@cloudflight.io\",\r\n    \"description\": \"Description sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/user",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/user/4b3846f3-17bb-4487-a63a-f3e05239f5d7",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"4b3846f3-17bb-4487-a63a-f3e05239f5d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/user/error",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"error"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

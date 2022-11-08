@@ -34,6 +34,11 @@ public class UserController {
         return userMapper.map(userService.findById(userId));
     }
 
+    @GetMapping(CONTEXT_PATH + "/error")
+    UserViewDto getError(){
+        throw new IllegalArgumentException("This is a test Error");
+    }
+
     //TODO: Create GET Endpoint with the path /api/user/groupX/{name}
     //Use the getMessageFromCloudfunction Method of the useService
 }
