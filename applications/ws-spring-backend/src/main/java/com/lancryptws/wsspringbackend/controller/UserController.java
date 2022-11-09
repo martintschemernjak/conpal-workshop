@@ -41,4 +41,10 @@ public class UserController {
 
     //TODO: Create GET Endpoint with the path /api/user/groupX/{name}
     //Use the getMessageFromCloudfunction Method of the useService
+
+    @GetMapping(CONTEXT_PATH + "/martin/{name}")
+    String getWorkshopHelloWorld(@PathVariable(name = "name") String name){
+        return userService.getMessageFromCloudfunction(name);
+    }
+
 }
