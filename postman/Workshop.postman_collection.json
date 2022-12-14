@@ -70,6 +70,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Call Cloudfunction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/user/martin/hansWurst",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"martin",
+						"hansWurst"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

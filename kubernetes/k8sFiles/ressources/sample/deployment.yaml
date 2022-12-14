@@ -22,6 +22,8 @@ spec:
     spec:
       containers:
       - env:
+        - name: SPRING_CLOUDFUNCTION_URL
+          value: https://cf-conpal-ws-mtschemernjak.azurewebsites.net/api/Workshop
         - name: APPLICATIONINSIGHTS_CONNECTION_STRING
           valueFrom:
             secretKeyRef:
@@ -37,7 +39,7 @@ spec:
             secretKeyRef:
               key: password
               name: ws-spring-backend-db-credentials-group1
-        image: crconpalwswesteurope001.azurecr.io/workshop/group1/ws-spring-backend
+        image: crconpalwswesteurope001.azurecr.io/applications/ws-mtschemernjak
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 10
